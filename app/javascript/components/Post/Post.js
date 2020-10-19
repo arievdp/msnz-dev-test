@@ -14,6 +14,7 @@ export default function Post(props) {
 
     return (
         <Fragment >
+            <h1>Title: {post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
             <div>
                 <h4>Author: {post.author}</h4>
