@@ -4,9 +4,9 @@ Welcome!
 
 This project is a blog that displays Markdown files using Ruby on Rails as the backend, and React JS as the frontend.
 
-url: https://msnz-md-blog.herokuapp.com/
+I have deployed the app on Heroku - url: https://msnz-md-blog.herokuapp.com/
 
-This app uses:
+This project uses:
 - [Ruby on Rails](https://rubyonrails.org/)
 - [React JS](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
@@ -21,7 +21,9 @@ This app requires Ruby version 2.6.6 on your computer. You may already have Ruby
 
 If your version of Ruby is different to 2.6.6, you can use `rbenv`, a Ruby Version Manager, to install a specific version of Ruby. Check out the [documentation](https://github.com/rbenv/rbenv#installing-ruby-version).
 
-If you need help with installing Ruby using `rbenv`, you can follow this [guide for Mac OSX](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04#step-1-%E2%80%93-install-rbenv-and-dependencies).
+If you need help with installing Ruby using `rbenv`, you can follow these guides: 
+- [Mac OSX](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-macos)
+- [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04)
 
 ## Setup
 
