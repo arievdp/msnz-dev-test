@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.grid-container {
+    margin-top: 20px;
+}
