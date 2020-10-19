@@ -16,18 +16,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Posts() {
     const [posts, setPosts] = useState([])
-    const [spacing, setSpacing] = React.useState(2);
     const classes = useStyles();
 
     useEffect(()=> {
         axios.get('/api/v1/posts.json')
-        .then( resp =>  {setPosts(resp.data.posts) } )
+        .then( resp =>  { setPosts(resp.data.posts) } )
     }, [posts.length])
 
     const grid = posts.map( item => {
         return (
         <Grid item xs={4}>
-            <Card key={item.title} attributes={item} />
+            <Card key={item.slug} attributes={item} />
         </Grid>
         )
     })
