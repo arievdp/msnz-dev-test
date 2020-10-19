@@ -6,12 +6,19 @@ export default function Posts() {
 
     useEffect(()=> {
         axios.get('/api/v1/posts.json')
-        .then( resp =>  console.log(resp) )
+        .then( resp =>  {setPosts(resp.data.posts) } )
     }, [posts.length])
+
+    const list = posts.map( item => {
+        return (
+            <li key={item.title}>{item.title}</li>
+        )
+    })
 
     return (
         <div>
-            I am the posts index
+            <p>Our great posts!</p>
+            <ul>{list}</ul>
         </div>
     )
 }

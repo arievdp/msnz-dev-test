@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import axios from 'axios'
 
 export default function Post(props) {
@@ -9,12 +9,17 @@ export default function Post(props) {
         const url = `/api/v1/posts/${slug}`
         
         axios.get(url)
-        .then( resp => console.log(resp))
+        .then( resp => { setPost(resp.data.post[0]) })
     }, [])
 
     return (
-        <div>
-            I am the posts view
-        </div>
+        <Fragment >
+            <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+            <div>
+                <h4>Author: {post.author}</h4>
+                <p>Tags: {post.tags}</p>
+                <img src={post.img_url} />
+            </div>
+        </Fragment>
     )
 }
