@@ -25,8 +25,8 @@ export default function Posts() {
 
     const grid = posts.map( item => {
         return (
-        <Grid item xs={4}>
-            <Card key={item.slug} attributes={item} />
+        <Grid key={item.slug} item xs={4}>
+            <Card attributes={item} />
         </Grid>
         )
     })

@@ -36,10 +36,10 @@ export default function App() {
                 </Toolbar>
             </AppBar>
             <Container>
-            <Switch>
-                <Route exact path="/" component={Posts} />
-                <Route exact path="/posts/:slug" component={Post} />
-            </Switch>
+                <Switch>
+                    <Route exact path="/" component={Posts} />
+                    <Route exact path="/posts/:slug" component={Post} />
+                </Switch>
             </Container>
         </Fragment>   
     )
