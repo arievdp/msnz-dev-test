@@ -1,24 +1,46 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import axios from 'axios'
+import Card from './Card'
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    control: {
+        padding: theme.spacing(2),
+      },
+  }));
+
 
 export default function Posts() {
     const [posts, setPosts] = useState([])
+    const [spacing, setSpacing] = React.useState(2);
+    const classes = useStyles();
 
     useEffect(()=> {
         axios.get('/api/v1/posts.json')
         .then( resp =>  {setPosts(resp.data.posts) } )
     }, [posts.length])
 
-    const list = posts.map( item => {
+    const grid = posts.map( item => {
         return (
-            <li key={item.title}>{item.title}</li>
+        <Grid item xs={4}>
+            <Card key={item.title} attributes={item} />
+        </Grid>
         )
     })
 
     return (
-        <div>
-            <p>Our great posts!</p>
-            <ul>{list}</ul>
-        </div>
+        <Fragment>
+            <div className="grid-container">
+                <Grid container spacing={1}>
+                    <Grid container item xs={12} spacing={3} >
+                        {grid}
+                    </Grid>
+                </Grid>
+            </div>
+        </Fragment>
     )
 }
