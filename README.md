@@ -2,11 +2,16 @@
 
 Welcome!
 
+This project is a blog that displays Markdown files using Ruby on Rails as the backend, and React JS on the frontend.
+
+url: https://msnz-blog.herokuapp.com/
+
 This app uses:
 - [Ruby on Rails](https://rubyonrails.org/)
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/)
 - [Material UI](https://material-ui.com/)
+- [Axios](https://github.com/axios/axios)
 - [RedCarpet](https://github.com/vmg/redcarpet)
 
 ## Installation
