@@ -37,6 +37,7 @@ module Api
 
             def process_md(md)
                 # Builds a hash from data inside the .md
+                # Adds a random image URL to the hash of a (hopefully) adorable Golden Retriever
                 post = Hash.new
                 post[:title]    = md.match(/(?<=Title: ).*?(?=\n)/)[0]
                 post[:author]   = md.match(/(?<=Author: ).*?(?=\n)/)[0]
@@ -88,7 +89,7 @@ module Api
                 # The words becomes the key, and the number of occurences becomes the value
                 words.each { |word| frequency[word.downcase] += 1 unless stop_words.include?(word) }
 
-                # Sorts the hash frequency by value, and returns the top 5 keys as a string sperated by comma's
+                # Sorts the frequency hash by value, and returns the top 5 keys as a string sperated by comma's
                 frequency.sort_by { |key, value| value }.reverse.first(5).to_h.keys.join(", ")
             end
 
