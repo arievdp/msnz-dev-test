@@ -15,7 +15,13 @@ This app uses:
 - [RedCarpet](https://github.com/vmg/redcarpet)
 
 ## Installation
-This app requires Ruby version 2.6.6 on your computer. If you need help with installing Ruby using `rbenv`, you can follow this [guide](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04#step-1-%E2%80%93-install-rbenv-and-dependencies).
+This app requires Ruby version 2.6.6 on your computer. You may already have Ruby installed on your computer. You can check inside a terminal emulator by typing:
+
+```ruby -v```
+
+If your version of Ruby is different to 2.6.6, you can use `rbenv`, a Ruby Version Manager, to install a specific version of Ruby. Check out the [documentation](https://github.com/rbenv/rbenv#installing-ruby-version).
+
+If you need help with installing Ruby using `rbenv`, you can follow this [guide for Mac OSX](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-18-04#step-1-%E2%80%93-install-rbenv-and-dependencies).
 
 ## Setup
 
