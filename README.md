@@ -4,7 +4,7 @@ Welcome!
 
 This project is a blog that displays Markdown files using Ruby on Rails as the backend, and React JS on the frontend.
 
-url: https://msnz-blog.herokuapp.com/
+url: https://msnz-md-blog.herokuapp.com/
 
 This app uses:
 - [Ruby on Rails](https://rubyonrails.org/)
