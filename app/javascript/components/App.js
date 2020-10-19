@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link as RouterLink } from 'react-router-dom'
 import Post from './Post/Post'
 import Posts from './Posts/Posts'
 import Link from '@material-ui/core/Link';
@@ -10,8 +10,17 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
+const LinkBehavior = React.forwardRef((props, ref) => (
+    <RouterLink ref={ref} to="/" {...props} />
+  ));
+
 const useStyles = makeStyles((theme) => ({
-}));
+    root: {
+        '& > * + *': {
+          marginLeft: theme.spacing(2),
+        },
+      },
+    }));
 
 export default function App() {
     const classes = useStyles();
@@ -22,7 +31,7 @@ export default function App() {
             <AppBar position="relative">
                 <Toolbar>
                 <Typography variant="h6" color="inherit" noWrap>
-                    Media Suite Blog
+                    <Link component={LinkBehavior} color="inherit">Media Suite Blog</Link>
                 </Typography>   
                 </Toolbar>
             </AppBar>
