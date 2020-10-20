@@ -34,7 +34,7 @@ git clone git@github.com:arievdp/msnz-dev-test.git
 # install dependencies
 cd msnz-dev-test
 bundle install
-yarn install --check-files
+yarn install --check-files OR npm install
 
 # database creation
 rails db:create
